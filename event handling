@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: white;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button,
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        input {
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Event Handling</h1>
+
+    <button id="btn">Submit</button>
+
+    <input type="text" id="input" placeholder="Enter something">
+
+    <script>
+
+        /*
+        EVENT HANDLING
+
+        Event:
+        An event is an action that happens on a webpage.
+
+        Examples:
+        Click, keypress, scroll, focus, etc.
+
+        Types of Events:
+
+        Mouse Events:
+        - click
+        - doubleclick
+        - mouseover
+        - mouseout
+        - mousemove
+
+        Keyboard Events:
+        - keydown
+        - keyup
+        - keypress
+
+        Focus Events:
+        - focus
+        - blur
+        - focusin
+        - focusout
+
+        Form Events:
+        - submit
+        - reset
+        - change
+        */
+
+
+        /*
+        WAYS TO HANDLE EVENTS
+
+        1. Inline event handling
+        2. Internal event handling
+        3. Event properties
+        4. addEventListener()
+        */
+
+
+        // Selecting the button and input elements
+
+        let v1 = document.getElementById("btn");
+        let v2 = document.getElementById("input");
+
+
+        // Event handling using event property
+
+        v1.onclick = change;
+
+
+        // Function executed when button is clicked
+
+        function change() {
+            document.body.style.backgroundColor = "grey";
+        }
+
+
+        // Event handling using addEventListener()
+
+        /*
+        v2.addEventListener("focus", changeInput);
+
+        function changeInput() {
+            v2.style.backgroundColor = "green";
+        }
+        */
+
+    </script>
+
+</body>
+
+</html>
